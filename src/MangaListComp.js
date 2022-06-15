@@ -9,9 +9,6 @@ function MangaList() {
       method: "DELETE",
     })
       .then((res) => res.json())
-      .then(() => {
-        console.log("success");
-      })
       .then(() => getManga());
   };
 
@@ -19,7 +16,6 @@ function MangaList() {
     fetch("https://6197ebee164fa60017c22ebd.mockapi.io/manga")
       .then((data) => data.json())
       .then((mvs) => {
-        console.log(mvs);
         setManga(mvs);
       });
   };
